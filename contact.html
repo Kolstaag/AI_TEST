@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact SkyTech Drones</title>
+  <meta name="description" content="Get in touch with SkyTech Drones for sales, rentals, repairs, parts, training, and support." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top" aria-label="SkyTech Drones home">
+        <span class="brand-mark" aria-hidden="true">🛰️</span>
+        <span class="brand-name">SkyTech Drones</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
+        <span class="theme-label">Light</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#drones">Drones</a>
+        <a href="purchase.html">Buy</a>
+        <a href="index.html#rentals">Rentals</a>
+        <a href="index.html#repairs">Repairs</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="login.html">Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero-compact contact-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Contact SkyTech Drones</h1>
+          <p class="hero-subtitle">Questions about buying, rentals, repairs, parts, training, or support? Reach out and our team will help you choose the right next step.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact-form-card">Send a message</a>
+            <a class="btn ghost" href="purchase.html">Browse drones</a>
+          </div>
+          <ul class="hero-bullets">
+            <li>Fast replies for sales and support questions</li>
+            <li>Quote requests for rentals, fleets, and repairs</li>
+            <li>Light mode by default, with smooth theme toggle</li>
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <img src="assets/hero.webp" alt="Professional drone flying in clear blue sky" width="1600" height="900" loading="eager" />
+          <div class="hero-badge">
+            <div class="badge-title">We usually reply fast</div>
+            <div class="badge-sub">Sales • Support • Repairs • Rentals</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt contact-page-section" id="contact-page">
+      <div class="container">
+        <header class="section-head">
+          <h2>Get in Touch</h2>
+          <p>Ready to take flight? Contact us today</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-cards">
+            <div class="info-card">
+              <h3>Phone</h3>
+              <p><a href="tel:+15553766301">(555) 376-6301</a></p>
+              <p class="muted">(555) DRONE-01</p>
+            </div>
+
+            <div class="info-card">
+              <h3>Email</h3>
+              <p><a href="mailto:info@skytechdrones.com">info@skytechdrones.com</a></p>
+              <p><a href="mailto:sales@skytechdrones.com">sales@skytechdrones.com</a></p>
+            </div>
+
+            <div class="info-card">
+              <h3>Location</h3>
+              <p>123 Skyview Boulevard<br/>Tech Center, CA 94025</p>
+            </div>
+
+            <div class="info-card">
+              <h3>Hours</h3>
+              <p>Mon–Fri: 9am – 7pm<br/>Sat: 10am – 6pm<br/>Sun: 12pm – 5pm</p>
+            </div>
+          </div>
+
+          <form class="form-card" id="contact-form-card">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option>Drone Sales</option>
+                <option>Drone Rental</option>
+                <option>Light Show Event</option>
+                <option>Repair Service</option>
+                <option>Replacement Parts</option>
+                <option>Training</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">Send Message</button>
+            <p class="form-note">Messages are submitted securely to the site inbox and visible in the admin dashboard.</p>
+
+            <div class="form-success" role="status" aria-live="polite" hidden>
+              ✅ Message prepared! (Demo) Replace with a real form handler when you deploy.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-brand">SkyTech Drones</h3>
+        <p class="muted">Your trusted partner for professional drone solutions. Sales, rentals, repairs, and spectacular light shows.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="purchase.html">Buy Drones</a></li>
+          <li><a href="index.html#rentals">Rentals</a></li>
+          <li><a href="index.html#repairs">Repairs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#rentals">Light Shows</a></li>
+          <li><a href="index.html#parts">Parts</a></li>
+          <li><a href="contact.html">Training</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+15553766301">(555) 376-6301</a></li>
+          <li><a href="mailto:info@skytechdrones.com">info@skytechdrones.com</a></li>
+          <li><a href="contact.html">123 Skyview Blvd, Tech Center</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> SkyTech Drones. All rights reserved.</small>
+      <small class="muted">Professional drone solutions for every need.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

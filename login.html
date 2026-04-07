@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account Login — SkyTech Drones</title>
+  <meta name="description" content="Secure account login with multi-factor authentication for SkyTech Drones." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top" aria-label="SkyTech Drones home">
+        <span class="brand-mark" aria-hidden="true">🛰️</span>
+        <span class="brand-name">SkyTech Drones</span>
+      </a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
+        <span class="theme-label">Light</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="purchase.html">Buy</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" aria-current="page">Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero-compact auth-hero">
+      <div class="container auth-shell">
+        <div class="auth-card auth-card-wide">
+          <div class="auth-kicker">Secure access</div>
+          <h1>Login with MFA</h1>
+          <p class="hero-subtitle">Use your account password, then verify with a one-time code from your authenticator app.</p>
+
+          <div class="auth-alert" id="auth-alert" hidden></div>
+
+          <form id="login-form" class="auth-form">
+            <div class="field">
+              <label for="username">Username</label>
+              <input id="username" name="username" autocomplete="username" required />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+            </div>
+            <button class="btn primary" type="submit">Continue</button>
+          </form>
+
+          <section id="mfa-setup" hidden>
+            <h2>Set up MFA</h2>
+            <p class="muted">Scan this QR code in Google Authenticator, 1Password, Authy, or another TOTP app. Then enter the 6-digit code to finish setup.</p>
+            <div class="mfa-grid">
+              <div class="qr-wrap"><img id="mfa-qr" alt="MFA setup QR code" /></div>
+              <div>
+                <p><strong>Manual secret</strong></p>
+                <code id="mfa-secret" class="code-block"></code>
+                <form id="mfa-setup-form" class="auth-form compact-form">
+                  <div class="field">
+                    <label for="setup-token">Authenticator code</label>
+                    <input id="setup-token" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required />
+                  </div>
+                  <button class="btn primary" type="submit">Enable MFA</button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section id="mfa-challenge" hidden>
+            <h2>Enter your MFA code</h2>
+            <form id="mfa-form" class="auth-form compact-form">
+              <div class="field">
+                <label for="mfa-token">6-digit code</label>
+                <input id="mfa-token" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required />
+              </div>
+              <button class="btn primary" type="submit">Verify and sign in</button>
+            </form>
+          </section>
+
+          <div class="demo-credentials">
+            <h2>Seeded test accounts</h2>
+            <ul class="bullets">
+              <li><strong>Admin</strong> / <strong>Password</strong> — admin access</li>
+              <li><strong>testuser</strong> / <strong>Password</strong> — standard user</li>
+            </ul>
+            <p class="muted">These credentials are included only for local testing. Change them before any real deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> SkyTech Drones.</small>
+      <small class="muted">Protected with password login + MFA.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

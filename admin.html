@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard — SkyTech Drones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top"><span class="brand-mark">🛰️</span><span class="brand-name">SkyTech Drones</span></a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span></button>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode"><span class="theme-icon" aria-hidden="true">☀️</span><span class="theme-label">Light</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="purchase.html">Buy</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html">Account</a>
+        <a href="admin.html" aria-current="page">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <header class="section-head">
+          <h1>Admin Dashboard</h1>
+          <p>Review users and incoming contact submissions.</p>
+        </header>
+        <div class="dashboard-grid" id="admin-stats"></div>
+        <div class="admin-panels">
+          <section class="admin-panel">
+            <h2>Users</h2>
+            <div class="table-wrap"><table class="admin-table"><thead><tr><th>Username</th><th>Role</th><th>MFA</th><th>Created</th></tr></thead><tbody id="users-body"></tbody></table></div>
+          </section>
+          <section class="admin-panel">
+            <h2>Contact Requests</h2>
+            <div class="table-wrap"><table class="admin-table"><thead><tr><th>Name</th><th>Email</th><th>Service</th><th>Submitted</th></tr></thead><tbody id="messages-body"></tbody></table></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-bottom"><small>© <span id="year"></span> SkyTech Drones.</small></div></footer>
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buy a Drone — SkyTech Drones</title>
+  <meta name="description" content="Purchase drones from SkyTech. Choose a model and configuration, compare specs, and order online." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top" aria-label="SkyTech Drones home">
+        <span class="brand-mark" aria-hidden="true">🛰️</span>
+        <span class="brand-name">SkyTech Drones</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
+        <span class="theme-label">Light</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#drones">Drones</a>
+        <a href="purchase.html" aria-current="page">Buy</a>
+        <a href="index.html#rentals">Rentals</a>
+        <a href="index.html#repairs">Repairs</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero-compact">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Buy a Drone</h1>
+          <p class="hero-subtitle">Pick a model, choose a configuration, and see the price & details update instantly.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#catalog">Browse catalog</a>
+            <a class="btn ghost" href="contact.html">Talk to a specialist</a>
+          </div>
+          <ul class="hero-bullets">
+            <li>Free setup checklist included</li>
+            <li>Fast shipping + local pickup options</li>
+            <li>1-year warranty on eligible models</li>
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <img src="assets/drone2.webp" alt="Drone in flight" width="1600" height="900" loading="eager" />
+          <div class="hero-badge">
+            <div class="badge-title">Quick compare</div>
+            <div class="badge-sub">Switch configs to see changes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <header class="section-head">
+          <h2>Purchase catalog</h2>
+          <p>Select a configuration for each drone to update photos, price, and description.</p>
+        </header>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+
+        <div class="purchase-note">
+          <div class="note-card">
+            <h3>Need help choosing?</h3>
+            <p>Tell us what you want to do (photos, racing, inspections) and we’ll recommend the best kit.</p>
+            <a class="btn primary" href="contact.html">Get a recommendation</a>
+          </div>
+
+          <div class="note-card">
+            <h3>Bulk pricing</h3>
+            <p>Planning a fleet for your team? We offer multi-unit discounts, training bundles, and invoicing.</p>
+            <a class="btn ghost" href="contact.html">Request a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">SkyTech Drones</div>
+        <p class="footer-text">Sales, rentals, repairs, parts, and training.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Quick Links</div>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#rentals">Rentals</a>
+        <a href="index.html#repairs">Repairs</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Account</a>
+      </div>
+
+      <div>
+        <div class="footer-title">Purchasing</div>
+        <a href="#catalog">Catalog</a>
+        <a href="contact.html">Financing & invoicing</a>
+        <a href="contact.html">Shipping & pickup</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> SkyTech Drones</span>
+      <span class="footer-dot" aria-hidden="true">•</span>
+      <span>Light by default • Toggle when you want</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="purchase.js"></script>
+</body>
+</html>
